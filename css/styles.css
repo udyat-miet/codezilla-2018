@@ -20,6 +20,7 @@ ul {
 .header_background {
   background: url('./images/b2.jpg') center;
   background-size: cover;
+  background-attachment: fixed;
   animation-name: fadeInOutBack;
   animation-duration: 0.7s;
   animation-iteration-count: infinite;
