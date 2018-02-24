@@ -97,7 +97,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 100px 80px;
+  padding: 10px 80px;
 }
 
 /* contact panel */
@@ -151,8 +151,8 @@ hr {
 /*team Section*/
 
 .team .grid li {
-  padding: 50px;
-  flex-basis: 33%;
+  padding: 10px;
+  flex-basis: 20%;
   text-align: center;
 }
 
