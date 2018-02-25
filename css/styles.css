@@ -325,14 +325,19 @@ footer p {
 
 /*  */
 
+.nav a {
+  font-size: 16px;
+}
+
 .nav {
   position: fixed;
+  align-items: center;
   z-index: 1;
   top: 0;
   right: 0;
   opacity: 1;
   /* width: 100px; */
-  width: 80px;
+  width: 110px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
