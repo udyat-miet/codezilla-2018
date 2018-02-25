@@ -13,9 +13,40 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <!-- <link rel="stylesheet" href="css/styles.min.css"> -->
   <link rel="stylesheet" href="css/styles.min.css">
+  <link rel="stylesheet" href="css/menu.min.css">
 </head>
 
 <body>
+
+  <header>
+    <div class="container">
+      <nav id="navigation">
+        <a href="#1" class="logo">Codezilla 2018</a>
+        <a aria-label="mobile menu" class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        <ul class="menu-left">
+          <li>
+            <a href="#2">About</a>
+          </li>
+          <li>
+            <a href="#3">Rules</a>
+          </li>
+          <li>
+            <a href="#4">Schedule</a>
+          </li>
+          <li>
+            <a href="#5">Team</a>
+          </li>
+          <li>
+            <a href="#6">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <nav class="nav">
     <div class="burger">
@@ -355,7 +386,7 @@
   </section>
 
 
-  <div class="contact special2 b-contact">
+  <div id="6" class="contact special2 b-contact">
     <h3 class="title">Contact Us</h3>
     <p>Got a question? Feel free to ask :)</p>
     <hr>
@@ -405,7 +436,9 @@
 
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
   <script src="js/index.min.js "></script>
+  <script src="js/menu.min.js "></script>
 </body>
 
 </html>
