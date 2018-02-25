@@ -152,7 +152,7 @@ hr {
 
 .team .grid li {
   padding: 10px;
-  flex-basis: 20%;
+  flex-basis: 33%;
   text-align: center;
 }
 
@@ -325,6 +325,10 @@ footer p {
 
 /*  */
 
+.nav a {
+  font-size: 18px;
+}
+
 .nav {
   position: fixed;
   z-index: 1;
@@ -332,7 +336,7 @@ footer p {
   right: 0;
   opacity: 1;
   /* width: 100px; */
-  width: 80px;
+  width: 50px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -428,7 +432,7 @@ footer p {
 .burger__patty {
   position: relative;
   height: 2px;
-  width: 40px;
+  width: 30px;
   background: white;
 }
 .burger__patty:before {
