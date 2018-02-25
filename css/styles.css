@@ -152,7 +152,7 @@ hr {
 
 .team .grid li {
   padding: 10px;
-  flex-basis: 20%;
+  flex-basis: 33%;
   text-align: center;
 }
 
@@ -395,7 +395,7 @@ footer p {
 .nav__link:hover {
   background: #272b2e;
 }
-@media (max-width: 640px) {
+@media (max-width: 770px) {
   .nav {
     width: 1px;
     opacity: 0;
