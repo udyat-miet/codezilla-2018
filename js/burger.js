@@ -1,6 +1,6 @@
 toggle = document.querySelectorAll('.toggle')[0];
 nav = document.querySelectorAll('nav')[0];
-toggle_open_text = 'Menu';
+toggle_open_text = 'CZ18';
 toggle_close_text = 'Close';
 
 toggle.addEventListener(
