@@ -10,23 +10,26 @@ var openMenu = function() {
   menu.classList.toggle('nav__list--active');
 };
 
-panel.eq(0).find('.panel__content').addClass('panel__content--active');
+panel
+  .eq(0)
+  .find('.panel__content')
+  .addClass('panel__content--active');
 
 var scrollFx = function() {
   var ds = doc.scrollTop();
   var of = vh / 4;
-  
+
   for (var i = 0; i < panel.length; i++) {
-    if (panel.eq(i).offset().top < ds+of) {
-     panel
-       .eq(i)
-       .find('.panel__content')
-       .addClass('panel__content--active');
+    if (panel.eq(i).offset().top < ds + of) {
+      panel
+        .eq(i)
+        .find('.panel__content')
+        .addClass('panel__content--active');
     } else {
       panel
         .eq(i)
         .find('.panel__content')
-        .removeClass('panel__content--active')
+        .removeClass('panel__content--active');
     }
   }
 };
@@ -36,18 +39,25 @@ var scrolly = function(e) {
   var target = this.hash;
   var $target = $(target);
 
-  $('html, body').stop().animate({
-      'scrollTop': $target.offset().top
-  }, 300, 'swing', function () {
-      window.location.hash = target;
-  });
-}
+  $('html, body')
+    .stop()
+    .animate(
+      {
+        scrollTop: $target.offset().top
+      },
+      300,
+      'swing',
+      function() {
+        window.location.hash = target;
+      }
+    );
+};
 
 var init = function() {
   burger.addEventListener('click', openMenu, false);
   window.addEventListener('scroll', scrollFx, false);
   window.addEventListener('load', scrollFx, false);
-  $('a[href^="#"]').on('click',scrolly);
+  $('a[href^="#"]').on('click', scrolly);
 };
 
 doc.on('ready', init);
