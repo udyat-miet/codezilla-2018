@@ -5,424 +5,446 @@
   <meta charset="UTF-8">
   <title>Codezilla 2018</title>
   <meta name="description" content="Codezilla is an annual programming competition hosted by MIET, Meerut.">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="css/styles.min.css"> -->
   <link rel="stylesheet" href="css/styles.min.css">
   <link rel="stylesheet" href="css/burger.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
 </head>
 
 <body>
 
-  <nav class="top-right open">
-    <a class="disc l1" href="#2">
-      <div>About</div>
-    </a>
-    <a class="disc l2" href="#3">
-      <div>Rules</div>
-    </a>
-    <a class="disc l3" href="#4">
-      <div>Schedule</div>
-    </a>
-    <a class="disc l4" href="#5">
-      <div>Team</div>
-    </a>
-    <a class="disc l5 toggle" href="#">
-      <i class="fas fa-bars"></i>
-    </a>
-  </nav>
-
-
-  <nav class="nav">
-    <div class="burger">
-      <div class="burger__patty"></div>
+  <div id="load">
+    <div class='loader-ring'>
+      <div class='loader-ring-light'></div>
+      <div class='loader-ring-track'></div>
     </div>
-
-    <ul class="nav__list">
-      <li class="nav__item">
-        <a href="#1" class="nav__link c-blue">
-          <i class="fa fa-home"></i>
-        </a>
-      </li>
-      <li class="nav__item">
-        <a href="#2" class="nav__link c-steelblue scrolly">
-          <i class="fa fa-bolt"></i>
-          <!-- Rules -->
-        </a>
-      </li>
-      <li class="nav__item">
-        <a href="#3" class="nav__link c-red">
-          <i class="fa fa-music"></i>
-          <!-- Team -->
-        </a>
-      </li>
-      <li class="nav__item">
-        <a href="#4" class="nav__link c-green">
-          <i class="fa fa-paper-plane"></i>
-          <!-- Connect -->
-        </a>
-      </li>
-
-      <li class="nav__item">
-        <a href="#5" class="nav__link c-navy">
-          <i class="fa fa-paper-plane"></i>
-          <!-- Register -->
-        </a>
-      </li>
-
-      <li class="nav__item">
-        <a href="#6" class="nav__link c-red">
-          <i class="fa fa-paper-plane"></i>
-          <!-- Timeline -->
-        </a>
-      </li>
-    </ul>
-  </nav>
-
-  <section class="panel header_background" id="1">
-    <article class="panel__wrapper">
-      <div class="panel__content">
-        <h1 class="panel__headline white_font">
-          <!-- <i class="fa fa-camera-retro"></i>&nbsp;Codezilla 2018 -->
-          <img src="images/mietlogo.png" style="background: white;" alt="miet logo">
-        </h1>
-        <!-- <div class="panel__block"></div> -->
-        <p class="white_font">
-          <span>
-            <img src="images/codezilla.png" style="width: 100%; display:inline-block" alt="codezilla logo">
-          </span>
-
-          PEDESTAL TO THE CODING EXTRAVAGANZA OF MEERUT INSTITUTE OF ENGINEERING & TECHNOLOGY.
-          <br>
-        </p>
-        <blockquote class="white_font">
-          “Truth can only be found in one place: the code.”
-          <br> ― Robert C. Martin, Clean Code: A Handbook of Agile Software
-        </blockquote>
-        <a class="register_button" href="https://goo.gl/forms/uaqJOVWr4HOOEmE12">Register</a>
-      </div>
-      <!-- <a class="register_button" href="www.google.com">Register</a> -->
-    </article>
-  </section>
-
-  <section class="panel b-about" id="2">
-    <article class="panel__wrapper">
-      <div class="panel__content">
-        <h2 class="panel__headline white_font">
-          <i class="fa fa-code"></i>&nbsp;Codezilla 2018</h2>
-        <div class="panel__block"></div>
-        <div class="white_font rs_box">
-          <p>
-            Codezilla calls on programmers to put their skills to the test by solving multiple rounds of algorithmic puzzles and win
-            cash prizes worth
-            <span style="color: #27b15c;">₹15k.</span> In addition to being challenging and fun, Codezilla problems can help you develop your coding and
-            programming skills.
-          </p>
-
-          <p>So apply and hack through these round to show your coding prowess. </p>
-          <p>Competition will be held at Q-block, MIET Meerut as per
-            <a href="#4" style="font-weight: 700; text-decoration: underline">schedule.</a>
-          </p>
-
-          <!--
-            <p> Prize
-              <span> 1st position: ₹ 7000/- </span>&nbsp;
-              <span> 2nd position: ₹ 5000/- </span>&nbsp;
-              <span> 3rd position: ₹ 3000/- </span>&nbsp;
-            </p>
-          -->
-
-        </div>
-      </div>
-    </article>
-  </section>
-
-  <section class="panel b-rules" id="3">
-    <article class="panel__wrapper">
-      <div class="panel__content">
-        <h1 class="panel__headline white_font">
-          <i class="fa fa-info"></i>&nbsp;Rules</h1>
-        <div class="panel__block"></div>
-        <div class="white_font rs_box">
-          <ol>
-            <li> All the participants must register themselves on
-              <a href="http://www.codechef.com/" style="color: #5fc7ea;" target="_blank">CodeChef.</a>
-            </li>
-            <li>There is a pre-elimination round for MIETians. (
-              <a href="#4" style="color: #5fc7ea;">schedule</a>)
-            </li>
-            <li>All MIETians qualified in Round 1 will be able to participate in Round 2.</li>
-            <li>Non-mietians will be able to participate only in round 2.</li>
-            <li>Registration fee of ₹100/-per student is to be paid in cash at registration desk on 24 March</li>
-            <li>Keep CodeChef credentials handy: they will be used to participate in the competition. </li>
-            <li>This is a team event and each team is allowed to have 1-2 members.</li>
-            <li>Any form of plagiarism is strictly prohibited.</li>
-            <li>All the participants are required to carry their college ID CARDS.</li>
-            <li>Computer systems will be provided to all the participants throughout the competition. </li>
-          </ol>
-        </div>
-      </div>
-    </article>
-  </section>
-
-  <section class="panel b-timeline" id="4">
-    <article class="panel__wrapper ">
-      <div class="panel__content ">
-        <h1 class="panel__headline white_font ">
-          <i class="fas fa-calendar-alt"></i>&nbsp;Schedule</h1>
-        <div class="panel__block "></div>
-
-        <ul class="timeline">
-
-          <!-- Item 1 -->
-          <li>
-            <div class="direction-r">
-              <div class="flag-wrapper">
-                <span class="flag">Registrations open</span>
-                <span class="time-wrapper">
-                  <span class="time">Sunday, Feb 25</span>
-                </span>
-              </div>
-              <div class="desc">
-                <i class="fas fa-bolt"></i>&nbsp;Set your code neurons ablaze!!</div>
-            </div>
-          </li>
-
-          <!-- Item 2 -->
-          <li>
-            <div class="direction-l">
-              <div class="flag-wrapper">
-                <span class="flag">Pre-Elimination round</span>
-                <span class="time-wrapper">
-                  <span class="time">Sunday, March 24 </span>
-                </span>
-              </div>
-              <div class="desc">
-                <i class="fas fa-terminal"></i>&nbsp;Hack those bits to march towards the podium.</div>
-            </div>
-          </li>
-
-          <!-- Item 3 -->
-          <li>
-            <div class="direction-r">
-              <div class="flag-wrapper">
-                <span class="flag">Final round</span>
-                <span class="time-wrapper">
-                  <span class="time">Sunday, March 31- </span>
-                </span>
-              </div>
-              <div class="desc">
-                <i class="fas fa-trophy"></i>&nbsp;Engrave your name on the cup.</div>
-            </div>
-          </li>
-
-        </ul>
-      </div>
-    </article>
-  </section>
-
-
-  <!-- Don't remove this sentinel section -->
-  <section></section>
-
-  <!-- Don't remove this sentinel section -->
-  <section id="5">
-    <div class="team special b-team">
-      <h3 class="title">Behind the scene</h3>
-      <h4>Mentors</h4>
-      <hr>
-
-      <ul class="grid">
-
-        <li>
-          <img src="images/prof_pp.jpg" alt="prof_pp">
-          <h3>Prof. Pradeep Pant</h3>
-          <p>Professor Incharge (CSE/IT) Department of Computer Science &amp; Engineering</p>
-        </li>
-
-        <li>
-          <img src="images/prof_mk.jpg" alt="prof_mk">
-          <h3>Dr. Mukesh Rawat</h3>
-          <p>Head of Department, Computer Science &amp; Engineering</p>
-        </li>
-        <li>
-          <img src="images/prof-ankur.jpg" alt="prof_ankur">
-          <h3> Mr. Ankur Garg</h3>
-          <p>Associate Professor, Department of Computer Science &amp; Engineering</p>
-        </li>
-        <li>
-          <img src="images/prof_aj.jpg" alt="prof_aj">
-          <h3> Dr. Ajay Kumar</h3>
-          <p>Dean of Student Welfare Head of Department, MBA</p>
-        </li>
-
-      </ul>
-
-      <h4>Team</h4>
-      <hr>
-
-      <ul class="grid">
-        <li>
-          <img src="images/rahul.jpg" alt="rahul">
-          <h3>Rahul Verma</h3>
-          <p>Technical Head
-            <br>
-            <a target="_blank" href="https://www.linkedin.com/in/rahul-verma-864b89126/">LinkedIn</a>
-            | +91-8449903130
-          </p>
-        </li>
-
-        <li>
-          <img src="images/shivam.png" alt="shivam">
-          <h3> Shivam Agarwal</h3>
-          <p>Technical Head
-            <br>
-            <a target="_blank" href="https://www.linkedin.com/in/shivam-agarwal-94587082/">LinkedIn</a>
-            | +91-8791603778
-          </p>
-
-        </li>
-
-        <li>
-          <img src="images/ashutosh.jpg" alt="ashutosh">
-          <h3>Ashutosh Gangwar</h3>
-          <p>Committee
-            <br>
-            <a target="_blank" href="https://www.linkedin.com/in/ashutoshgngwr/">LinkedIn</a>
-            | +91-9456068867
-          </p>
-        </li>
-        <li>
-          <img src="images/samriddhi.jpg" alt="samriddhi">
-          <h3>Samriddhi Singh</h3>
-          <p>Committee
-            <br>
-            <a target="_blank" href="https://www.linkedin.com/in/samriddhi-singh-45b10611a">LinkedIn</a>
-          </p>
-        </li>
-
-
-
-        <li>
-          <img src="images/shagun.jpeg" alt="shagun">
-          <h3>Shagun Malik</h3>
-          <p>Committee
-            <br>
-            <a target="_blank" href="https://www.linkedin.com/in/shagun-malik-672716152/">LinkedIn</a>
-            | +91-7830134358
-          </p>
-        </li>
-
-        <li>
-          <img src="images/tushit.jpeg" alt="tushit">
-          <h3> Tushit Agarwal</h3>
-          <p>Committee
-            <br>
-            <a target="_blank" href="https://www.linkedin.com/profile/">LinkedIn</a>
-          </p>
-        </li>
-
-        <li>
-          <img src="images/nishant.jpg" alt="nishant">
-          <h3> Nishant Sharma</h3>
-          <p>Committee
-            <br>
-            <a target="_blank" href="https://www.linkedin.com/in/nishant-sharna-58a349149">LinkedIn</a>
-            | +91-7830134358
-          </p>
-        </li>
-
-
-
-
-        <li>
-          <img src="images/riya.png" alt="riya">
-          <h3> Riya Deshwal</h3>
-          <p>Committee
-            <br>
-            <a target="_blank" href="https://www.linkedin.com/in/riya-deshwal-9ab538152">LinkedIn</a>
-          </p>
-        </li>
-
-        <li>
-          <img src="images/prachi.jpeg" alt="prachi">
-          <h3> Prachi Sharma</h3>
-          <p>Committee
-            <br>
-            <a target="_blank" href="https://www.linkedin.com/profile/view?id=AAIAACS-I7kBG12JmM1USe_PD_mMeYJmno8Orqk">LinkedIn</a>
-          </p>
-        </li>
-
-        <li>
-          <img src="images/ravi.jpeg" alt="ravi">
-          <h3> Ravi Soni</h3>
-          <p>Committee
-            <br>
-            <a target="_blank" href="https://www.linkedin.com/in/ravi-soni-32139198/">LinkedIn</a>
-            | +91-7906823736
-          </p>
-        </li>
-      </ul>
-
-      <ul class="grid">
-
-      </ul>
-    </div>
-  </section>
-
-
-  <div class="contact special2 b-contact">
-    <h3 class="title">Contact Us</h3>
-    <p>Got a question? Feel free to ask :)</p>
-    <hr>
-    <form action="https://formspree.io/ravi.soni.cs.2016@miet.ac.in" method='post'>
-      <input type='hidden' name='form-name' value='form 1' />
-      <input type="text" name="name" placeholder="your query">
-      <input type="email" name="_replyto" placeholder="your email">
-      <button class="btn" type="submit">Ping us</button>
-    </form>
   </div>
 
 
-  <footer class="footer-bg">
-    <p>© 2018
-      <a href="http://www.miet.ac.in/">MIET, Meerut</a>.
-    </p>
+  <div id="contents">
+    <nav class="top-right open">
+      <a class="disc l1" href="#2">
+        <div>About</div>
+      </a>
+      <a class="disc l2" href="#3">
+        <div>Rules</div>
+      </a>
+      <a class="disc l3" href="#4">
+        <div>Schedule</div>
+      </a>
+      <a class="disc l4" href="#5">
+        <div>Team</div>
+      </a>
+      <a class="disc l5 toggle" href="#">
+        <i class="fas fa-bars"></i>
+      </a>
+    </nav>
 
-    <p>Fabricated with
-      <i class="fas fa-heart"></i> by
-      <span>
-        <a style="color: #28e90f; font-size: 1.2em; font-weight: 700; text-decoration: underline;" href="https://soniravi.me">Ravi Soni</a>
-      </span>
-    </p>
-    <p>Let's get the hype started🔥</p>
-    <ul>
 
-      <li>
-        <a href="https://www.facebook.com/codezillamiet">
-          <i class="fab fa-facebook-f fa-2x"></i>
-        </a>
-      </li>
+    <nav class="nav">
+      <div class="burger">
+        <div class="burger__patty"></div>
+      </div>
 
-      <li>
-        <a href="https://www.facebook.com/codezillamiet">
-          <i class="fab fa-twitter fa-2x"></i>
-        </a>
-      </li>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#1" class="nav__link c-blue">
+            <i class="fa fa-home"></i>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#2" class="nav__link c-steelblue scrolly">
+            <i class="fa fa-bolt"></i>
+            <!-- Rules -->
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#3" class="nav__link c-red">
+            <i class="fa fa-music"></i>
+            <!-- Team -->
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#4" class="nav__link c-green">
+            <i class="fa fa-paper-plane"></i>
+            <!-- Connect -->
+          </a>
+        </li>
 
-      <li>
-        <a href="https://www.facebook.com/codezillamiet">
-          <i class="fab fa-google-plus fa-2x"></i>
-        </a>
-      </li>
-    </ul>
+        <li class="nav__item">
+          <a href="#5" class="nav__link c-navy">
+            <i class="fa fa-paper-plane"></i>
+            <!-- Register -->
+          </a>
+        </li>
 
-  </footer>
+        <li class="nav__item">
+          <a href="#6" class="nav__link c-red">
+            <i class="fa fa-paper-plane"></i>
+            <!-- Timeline -->
+          </a>
+        </li>
+      </ul>
+    </nav>
 
+    <section class="panel header_background" id="1">
+      <article class="panel__wrapper">
+        <div class="panel__content">
+          <h1 class="panel__headline white_font">
+            <!-- <i class="fa fa-camera-retro"></i>&nbsp;Codezilla 2018 -->
+            <img src="images/mietlogo.png" style="background: white;" alt="miet logo">
+          </h1>
+          <!-- <div class="panel__block"></div> -->
+          <p class="white_font">
+            <span>
+              <img src="images/codezilla.png" style="width: 100%; display:inline-block" alt="codezilla logo">
+            </span>
+
+            PEDESTAL TO THE CODING EXTRAVAGANZA OF MEERUT INSTITUTE OF ENGINEERING & TECHNOLOGY.
+            <br>
+          </p>
+          <blockquote class="white_font">
+            “Truth can only be found in one place: the code.”
+            <br> ― Robert C. Martin, Clean Code: A Handbook of Agile Software
+          </blockquote>
+          <a class="register_button" href="https://goo.gl/forms/uaqJOVWr4HOOEmE12">Register</a>
+        </div>
+        <!-- <a class="register_button" href="www.google.com">Register</a> -->
+      </article>
+    </section>
+
+    <section class="panel b-about" id="2">
+      <article class="panel__wrapper">
+        <div class="panel__content">
+          <h2 class="panel__headline white_font">
+            <i class="fa fa-code"></i>&nbsp;Codezilla 2018</h2>
+          <div class="panel__block"></div>
+          <div class="white_font rs_box">
+            <p>
+              Codezilla calls on programmers to put their skills to the test by solving multiple rounds of algorithmic puzzles and win
+              cash prizes worth
+              <span style="color: #27b15c;">₹15k.</span> In addition to being challenging and fun, Codezilla problems can help you develop your coding
+              and programming skills.
+            </p>
+
+            <p>So apply and hack through these round to show your coding prowess. </p>
+            <p>Competition will be held at Q-block, MIET Meerut as per
+              <a href="#4" style="font-weight: 700; text-decoration: underline">schedule.</a>
+            </p>
+
+            <!--
+                  <p> Prize
+                    <span> 1st position: ₹ 7000/- </span>&nbsp;
+                    <span> 2nd position: ₹ 5000/- </span>&nbsp;
+                    <span> 3rd position: ₹ 3000/- </span>&nbsp;
+                  </p>
+                -->
+
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel b-rules" id="3">
+      <article class="panel__wrapper">
+        <div class="panel__content">
+          <h1 class="panel__headline white_font">
+            <i class="fa fa-info"></i>&nbsp;Rules</h1>
+          <div class="panel__block"></div>
+          <div class="white_font rs_box">
+            <ol>
+              <li> All the participants must register themselves on
+                <a href="http://www.codechef.com/" style="color: #5fc7ea;" target="_blank">CodeChef.</a>
+              </li>
+              <li>There is a pre-elimination round for MIETians. (
+                <a href="#4" style="color: #5fc7ea;">schedule</a>)
+              </li>
+              <li>All MIETians qualified in Round 1 will be able to participate in Round 2.</li>
+              <li>Non-mietians will be able to participate only in round 2.</li>
+              <li>Registration fee of ₹100/-per student is to be paid in cash at registration desk on 24 March</li>
+              <li>Keep CodeChef credentials handy: they will be used to participate in the competition. </li>
+              <li>This is a team event and each team is allowed to have 1-2 members.</li>
+              <li>Any form of plagiarism is strictly prohibited.</li>
+              <li>All the participants are required to carry their college ID CARDS.</li>
+              <li>Computer systems will be provided to all the participants throughout the competition. </li>
+            </ol>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel b-timeline" id="4">
+      <article class="panel__wrapper ">
+        <div class="panel__content ">
+          <h1 class="panel__headline white_font ">
+            <i class="fas fa-calendar-alt"></i>&nbsp;Schedule</h1>
+          <div class="panel__block "></div>
+
+          <ul class="timeline">
+
+            <!-- Item 1 -->
+            <li>
+              <div class="direction-r">
+                <div class="flag-wrapper">
+                  <span class="flag">Registrations open</span>
+                  <span class="time-wrapper">
+                    <span class="time">Sunday, Feb 25</span>
+                  </span>
+                </div>
+                <div class="desc">
+                  <i class="fas fa-bolt"></i>&nbsp;Set your code neurons ablaze!!</div>
+              </div>
+            </li>
+
+            <!-- Item 2 -->
+            <li>
+              <div class="direction-l">
+                <div class="flag-wrapper">
+                  <span class="flag">Pre-Elimination round</span>
+                  <span class="time-wrapper">
+                    <span class="time">Sunday, March 24 </span>
+                  </span>
+                </div>
+                <div class="desc">
+                  <i class="fas fa-terminal"></i>&nbsp;Hack those bits to march towards the podium.</div>
+              </div>
+            </li>
+
+            <!-- Item 3 -->
+            <li>
+              <div class="direction-r">
+                <div class="flag-wrapper">
+                  <span class="flag">Final round</span>
+                  <span class="time-wrapper">
+                    <span class="time">Sunday, March 31- </span>
+                  </span>
+                </div>
+                <div class="desc">
+                  <i class="fas fa-trophy"></i>&nbsp;Engrave your name on the cup.</div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </article>
+    </section>
+
+
+    <!-- Don't remove this sentinel section -->
+    <section></section>
+
+    <!-- Don't remove this sentinel section -->
+    <section id="5">
+      <div class="team special b-team">
+        <h3 class="title">Behind the scene</h3>
+        <h4>Mentors</h4>
+        <hr>
+
+        <ul class="grid">
+
+          <li>
+            <img src="images/prof_pp.jpg" alt="prof_pp">
+            <h3>Prof. Pradeep Pant</h3>
+            <p>Professor Incharge (CSE/IT) Department of Computer Science &amp; Engineering</p>
+          </li>
+
+          <li>
+            <img src="images/prof_mk.jpg" alt="prof_mk">
+            <h3>Dr. Mukesh Rawat</h3>
+            <p>Head of Department, Computer Science &amp; Engineering</p>
+          </li>
+          <li>
+            <img src="images/prof-ankur.jpg" alt="prof_ankur">
+            <h3> Mr. Ankur Garg</h3>
+            <p>Associate Professor, Department of Computer Science &amp; Engineering</p>
+          </li>
+          <li>
+            <img src="images/prof_aj.jpg" alt="prof_aj">
+            <h3> Dr. Ajay Kumar</h3>
+            <p>Dean of Student Welfare Head of Department, MBA</p>
+          </li>
+
+        </ul>
+
+        <h4>Team</h4>
+        <hr>
+
+        <ul class="grid">
+          <li>
+            <img src="images/rahul.jpg" alt="rahul">
+            <h3>Rahul Verma</h3>
+            <p>Technical Head
+              <br>
+              <a target="_blank" href="https://www.linkedin.com/in/rahul-verma-864b89126/">LinkedIn</a>
+              | +91-8449903130
+            </p>
+          </li>
+
+          <li>
+            <img src="images/shivam.png" alt="shivam">
+            <h3> Shivam Agarwal</h3>
+            <p>Technical Head
+              <br>
+              <a target="_blank" href="https://www.linkedin.com/in/shivam-agarwal-94587082/">LinkedIn</a>
+              | +91-8791603778
+            </p>
+
+          </li>
+
+          <li>
+            <img src="images/ashutosh.jpg" alt="ashutosh">
+            <h3>Ashutosh Gangwar</h3>
+            <p>Committee
+              <br>
+              <a target="_blank" href="https://www.linkedin.com/in/ashutoshgngwr/">LinkedIn</a>
+              | +91-9456068867
+            </p>
+          </li>
+          <li>
+            <img src="images/samriddhi.jpg" alt="samriddhi">
+            <h3>Samriddhi Singh</h3>
+            <p>Committee
+              <br>
+              <a target="_blank" href="https://www.linkedin.com/in/samriddhi-singh-45b10611a">LinkedIn</a>
+            </p>
+          </li>
+
+
+
+          <li>
+            <img src="images/shagun.jpeg" alt="shagun">
+            <h3>Shagun Malik</h3>
+            <p>Committee
+              <br>
+              <a target="_blank" href="https://www.linkedin.com/in/shagun-malik-672716152/">LinkedIn</a>
+              | +91-7830134358
+            </p>
+          </li>
+
+          <li>
+            <img src="images/tushit.jpeg" alt="tushit">
+            <h3> Tushit Agarwal</h3>
+            <p>Committee
+              <br>
+              <a target="_blank" href="https://www.linkedin.com/profile/">LinkedIn</a>
+            </p>
+          </li>
+
+          <li>
+            <img src="images/nishant.jpg" alt="nishant">
+            <h3> Nishant Sharma</h3>
+            <p>Committee
+              <br>
+              <a target="_blank" href="https://www.linkedin.com/in/nishant-sharna-58a349149">LinkedIn</a>
+              | +91-7830134358
+            </p>
+          </li>
+
+
+
+
+          <li>
+            <img src="images/riya.png" alt="riya">
+            <h3> Riya Deshwal</h3>
+            <p>Committee
+              <br>
+              <a target="_blank" href="https://www.linkedin.com/in/riya-deshwal-9ab538152">LinkedIn</a>
+            </p>
+          </li>
+
+          <li>
+            <img src="images/prachi.jpeg" alt="prachi">
+            <h3> Prachi Sharma</h3>
+            <p>Committee
+              <br>
+              <a target="_blank" href="https://www.linkedin.com/profile/view?id=AAIAACS-I7kBG12JmM1USe_PD_mMeYJmno8Orqk">LinkedIn</a>
+            </p>
+          </li>
+
+          <li>
+            <img src="images/ravi.jpeg" alt="ravi">
+            <h3> Ravi Soni</h3>
+            <p>Committee
+              <br>
+              <a target="_blank" href="https://www.linkedin.com/in/ravi-soni-32139198/">LinkedIn</a>
+              | +91-7906823736
+            </p>
+          </li>
+        </ul>
+
+        <ul class="grid">
+
+        </ul>
+      </div>
+    </section>
+
+
+    <div class="contact special2 b-contact">
+      <h3 class="title">Contact Us</h3>
+      <p>Got a question? Feel free to ask :)</p>
+      <hr>
+      <form action="https://formspree.io/ravi.soni.cs.2016@miet.ac.in" method='post'>
+        <input type='hidden' name='form-name' value='form 1' />
+        <input type="text" name="name" placeholder="your query">
+        <input type="email" name="_replyto" placeholder="your email">
+        <button class="btn" type="submit">Ping us</button>
+      </form>
+    </div>
+
+
+    <footer class="footer-bg">
+      <p>© 2018
+        <a href="http://www.miet.ac.in/">MIET, Meerut</a>.
+      </p>
+
+      <p>Fabricated with
+        <i class="fas fa-heart"></i> by
+        <span>
+          <a style="color: #28e90f; font-size: 1.2em; font-weight: 700; text-decoration: underline;" href="https://soniravi.me">Ravi Soni</a>
+        </span>
+      </p>
+      <p>Let's get the hype started🔥</p>
+      <ul>
+
+        <li>
+          <a href="https://www.facebook.com/codezillamiet">
+            <i class="fab fa-facebook-f fa-2x"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.facebook.com/codezillamiet">
+            <i class="fab fa-twitter fa-2x"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.facebook.com/codezillamiet">
+            <i class="fab fa-google-plus fa-2x"></i>
+          </a>
+        </li>
+      </ul>
+
+    </footer>
+  </div>
+
+  <script type="text/javascript">
+    document.onreadystatechange = function () {
+      var state = document.readyState
+      if (state == 'interactive') {
+        document.getElementById('contents').style.visibility = "hidden";
+      } else if (state == 'complete') {
+        document.getElementById('interactive');
+        document.getElementById('load').style.visibility = "hidden";
+        document.getElementById('contents').style.visibility = "visible";
+      }
+    }
+  </script>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <script src="js/index.min.js "></script>
