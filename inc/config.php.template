@@ -8,3 +8,5 @@ define('DB_NAME', 'some_db_name');
 define('DB_USER', 'some_db_user');
 define('DB_PASSWORD', 'some_password_for_above_user');
 define('DB_TABLE', 'some_table_name');
+
+$contact_emails = array("email1@miet.ac.in", "email2@gmail.com" /* .... */);

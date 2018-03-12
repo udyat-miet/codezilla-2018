@@ -1,21 +1,5 @@
 <?php
 
-/////////////////////////////
-//////// OUTPUT /////////////
-/////////////////////////////
-
-
-// {
-//		"team_id" : "string"
-//		"team_member" : {[
-//			{ "name" : "string" }, // member 1
-//			{ "name" : "string" } // member 2, if there is one
-//		]}
-
-// an email will also be sent to team members.
-// Each team will be assigned a committee member for contact via Reply-To email.
-
-
 require_once 'inc/DatabaseManager.class.php';
 require_once 'inc/lib/random_bytes_compat/random.php';
 
@@ -50,13 +34,45 @@ function validate_member_details($team_member, $reqd = TRUE) {
 	return TRUE;
 }
 
-function generate_response($code, $data) {
+function format_response($code, $data) {
 	return json_encode(
 		array(
 			'code' => $code,
 			'data' => $data
 		)
 	);
+}
+
+function load_email_template($team) {
+	$message = file_get_contents('inc/email.html.template');
+	$message =
+		str_replace('#leader_name', $team['member'][0]['name'],
+			str_replace('#team_name', $team['name'],
+				str_replace('#team_id', $team['id'], $message)));
+
+	if (empty($team['member'][1]['name']) === FALSE) {
+		$message = str_replace(
+			'#members',
+			$team['member'][0]['name'] . ", " . $team['member'][1]['name'],
+			$message
+		);
+	} else {
+		$message = str_replace('#members', $team['member'][0]['name'], $message);
+	}
+
+	if ($team['is_miet'] === 'mietian') {
+		$message = 
+			str_replace(
+				'#timings',
+				'<ul><li>24 March, 2018 2:00PM-5:00PM</li>'
+					. '<li>31 March, 2018 1:00PM-4:00PM</li></ul>',
+				$message
+			);
+	} else {
+		$message = str_replace('#timings', '31 March, 2018 1:00PM-4:00PM', $message);
+	}
+
+	return $message;
 }
 
 $team = array(
@@ -69,20 +85,20 @@ fetch_member($team, 1);
 fetch_member($team, 2);
 
 if (filter_var($team['email'], FILTER_VALIDATE_EMAIL) === FALSE)
-		die(generate_response(406, "Incorrect contact email!"));
+		die(format_response(406, "Incorrect contact email!"));
 
 if (empty($team['name']) === TRUE)
-		die(generate_response(400, "Team name can not be left blank!"));
+		die(format_response(400, "Team name can not be left blank!"));
 
 if (empty($team['is_miet']) === TRUE
 	|| ($team['is_miet'] !== 'mietian' && $team['is_miet'] !== 'non_mietian'))
-		die(generate_response(406, "Incorrect value for MIETian?"));
+		die(format_response(406, "Incorrect value for MIETian?"));
 
 if (validate_member_details($team["member"][0]) === FALSE)
-	die(generate_response(406, "Incomplete/incorrect details entered for Team Member #1!"));
+	die(format_response(406, "Incomplete/incorrect details entered for Team Member #1!"));
 
 if (validate_member_details($team["member"][1], FALSE) === FALSE)
-	die(generate_response(406, "Incomplete/incorrect details entered for Team Member #2!"));
+	die(format_response(406, "Incomplete/incorrect details entered for Team Member #2!"));
 
 try {
 	$db = new DatabaseManager();
@@ -95,9 +111,24 @@ try {
 
 	$team['id'] = bin2hex(random_bytes(4));
 	if ($db->insert($team) === FALSE)
-		die(generate_response(500, "An unknown error occurred!"));
+		die(format_response(500, "An unknown error occurred!"));
 
-	echo generate_response(202, $team['id']);
+	$from = $contact_emails[random_int(0, 4)];
+	mail(
+		$team['email'],
+		"Registration details for CodeZilla 2018 @ MIET, Meerut",
+		load_email_template($team),
+		"From: $from\r\n"
+			. "Reply-To: $from\r\n"
+			. "MIME-Version: 1.0\r\n"
+			. "Content-Type: text/html; charset=ISO-8859-1\r\n"
+	);
+	echo format_response(202, json_encode(
+		array(
+			"team_id" => $team['id'],
+			"member1" => $team['member'][0]['name']
+		)
+	));
 } catch (DatabaseManagerExecption $e) {
-	die(generate_response(500, "An internal server error occurred!"));
+	die(format_response(500, "An internal server error occurred!"));
 }
