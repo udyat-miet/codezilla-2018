@@ -1,0 +1,10 @@
+<?
+
+// template for config.php
+// insert relavant values and rename this to config.php
+
+define(DB_HOST, 'some_db_host');
+define(DB_NAME, 'some_db_name');
+define(DB_USER, 'some_db_user');
+define(DB_PASSWORD, 'some_password_for_above_user');
+
