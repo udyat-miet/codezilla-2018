@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Register | CZ18</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Nunito:400,300'>
+
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <style>
+    *,
+    *:before,
+    *:after {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      color: #384047;
+    }
+
+    form {
+      max-width: 300px;
+      margin: 10px auto;
+      padding: 10px 20px;
+      background: #f4f7f8;
+      border-radius: 8px;
+    }
+
+    .success {
+      max-width: 300px;
+      margin: 10px auto;
+      padding: 10px 20px;
+      background: #5fcf80;
+      border-radius: 8px;
+      color: white;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      line-height: 30px;
+      display: none;
+    }
+
+    .fail {
+      max-width: 300px;
+      margin: 10px auto;
+      padding: 10px 20px;
+      background: #d0021b;
+      border-radius: 8px;
+      color: white;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      line-height: 30px;
+      display: none;
+    }
+
+    h1 {
+      margin: 0 0 30px 0;
+      text-align: center;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="time"],
+    input[type="url"],
+    textarea,
+    select {
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      font-size: 16px;
+      height: auto;
+      margin: 0;
+      outline: 0;
+      padding: 15px;
+      width: 100%;
+      background-color: #e8eeef;
+      color: #8a97a0;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+      margin-bottom: 30px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin: 0 4px 8px 0;
+    }
+
+    select {
+      padding: 6px;
+      height: 32px;
+      border-radius: 2px;
+    }
+
+    button {
+      padding: 19px 39px 18px 39px;
+      color: #FFF;
+      background-color: #4bc970;
+      font-size: 18px;
+      text-align: center;
+      font-style: normal;
+      border-radius: 5px;
+      width: 100%;
+      border: 1px solid #3ac162;
+      border-width: 1px 1px 3px;
+      box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+      margin-bottom: 10px;
+    }
+
+    fieldset {
+      margin-bottom: 30px;
+      border: none;
+    }
+
+    legend {
+      font-size: 1.4em;
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    label.light {
+      font-weight: 300;
+      display: inline;
+    }
+
+    .number {
+      background-color: #5fcf80;
+      color: #fff;
+      height: 30px;
+      width: 30px;
+      display: inline-block;
+      font-size: 0.8em;
+      margin-right: 4px;
+      line-height: 30px;
+      text-align: center;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+      border-radius: 100%;
+    }
+
+    @media screen and (min-width: 480px) {
+      form {
+        max-width: 480px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="success">
+    <p>
+      Registration successful.
+      <br> Your team id is:
+      <span style="color: black;">TEAM_ID</span>
+      <br> Please note it for future references.
+    </p>
+  </div>
+
+  <div class="fail">
+    <p>Oh Snap!!
+      <br> Something went wrong. Please try again.</p>
+  </div>
+
+  <form action="register.php" method="post">
+
+    <h1>Register</h1>
+
+    <fieldset>
+      <legend>
+        <span class="number">1</span>Team details</legend>
+
+      <label for="mail">Leader's email</label>
+      <input type="email" id="mail" name="email" required>
+
+      <label for="team_name">Team name</label>
+      <input type="text" id="team_name" name="team_name" required>
+
+      <label>MIETian ?</label>
+      <input type="radio" id="mietian" value="mietian" name="is_miet">
+      <label for="mietian" class="light">Yes</label>
+      <br/>
+      <input type="radio" id="non_mietian" value="non_mietian" name="is_miet">
+      <label for="non_mietian" class="light">No</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>
+        <span class="number">2</span>Member 1 details</legend>
+
+      <label for="member1">Name:</label>
+      <input type="text" id="member1" name="member1" required>
+
+      <label for="codechef1">Codechef username</label>
+      <input type="text" id="codechef1" name="codechef1" required>
+
+      <label for="roll1">University roll no</label>
+      <input type="text" id="roll1" name="roll1">
+
+      <label for="branch1">Branch</label>
+      <input type="text" id="branch1" name="branch1">
+
+      <label>Year</label>
+      <input type="radio" id="first" value="first" name="year">
+      <label for="first" class="light">I</label>
+      <br/>
+
+      <input type="radio" id="second" value="second" name="year">
+      <label for="second" class="light">II</label>
+      <br/>
+
+      <input type="radio" id="third" value="third" name="year">
+      <label for="third" class="light">III</label>
+      <br/>
+
+      <input type="radio" id="fourth" value="fourth" name="year">
+      <label for="fourth" class="light">IV</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>
+        <span class="number">3</span>Member 2 details</legend>
+
+      <label for="member2">Name:</label>
+      <input type="text" id="member2" name="member2" required>
+
+      <label for="codechef2">Codechef username</label>
+      <input type="text" id="codechef2" name="codechef2" required>
+
+      <label for="roll2">University roll no</label>
+      <input type="text" id="roll2" name="roll2">
+
+      <label for="branch2">Branch</label>
+      <input type="text" id="branch2" name="branch2">
+
+      <label>Year</label>
+      <input type="radio" id="first2" value="first2" name="year2">
+      <label for="first2" class="light">I</label>
+      <br/>
+
+      <input type="radio" id="second2" value="second2" name="year2">
+      <label for="second2" class="light">II</label>
+      <br/>
+
+      <input type="radio" id="third2" value="third2" name="year2">
+      <label for="third2" class="light">III</label>
+      <br/>
+
+      <input type="radio" id="fourth2" value="fourth2" name="year2">
+      <label for="fourth2" class="light">IV</label>
+    </fieldset>
+
+    <button type="submit">Register</button>
+
+  </form>
+
+
+
+</body>
+
+</html>
