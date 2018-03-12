@@ -1,7 +1,7 @@
 <html>
 	<body>
 		<h3>Dear #leader_name,</h3>
-		<p>Your team, #team_name, has been successfully registered for CodeZilla 2018.</p>
+		<p>Your team, #team_name, has been successfully registered for <b>CodeZilla 2018</b>.</p>
 		<p>For any queries, reply back to this email without changing the subject line.</p>
 		<p>
 			<b>Team ID:</b> #team_id<br>
