@@ -113,7 +113,7 @@ try {
 	if ($db->insert($team) === FALSE)
 		die(format_response(500, "An unknown error occurred!"));
 
-	$from = $contact_emails[random_int(0, 4)];
+	$from = $contact_emails[random_int(0, count($contact_emails) - 1)];
 	mail(
 		$team['email'],
 		"Registration details for CodeZilla 2018 @ MIET, Meerut",
