@@ -123,12 +123,7 @@ try {
 			. "MIME-Version: 1.0\r\n"
 			. "Content-Type: text/html; charset=ISO-8859-1\r\n"
 	);
-	echo format_response(202, json_encode(
-		array(
-			"team_id" => $team['id'],
-			"member1" => $team['member'][0]['name']
-		)
-	));
+	echo format_response(202, $team['id']);
 } catch (DatabaseManagerExecption $e) {
 	die(format_response(500, "An internal server error occurred!"));
 }
