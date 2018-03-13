@@ -164,7 +164,7 @@
     <p>
       Registration successful.
       <br> Your team id is:
-      <span style="color: black;">TEAM_ID</span>
+      <span id="team_id" style="color: black;">TEAM_ID</span>
       <br> Please note it for future references.
     </p>
   </div>
@@ -272,7 +272,40 @@
 
   </form>
 
+  <script type="text/javascript">
+    var btn = document.getElementsByTagName('button')[0];
+    var success = document.getElementsByClassName('success')[0];
+    var fail = document.getElementsByClassName('fail')[0];
+    var teamId = document.getElementById('team_id');
 
+    httpRequest = new XMLHttpRequest();
+
+    btn.addEventListener('click', handleTeamIdGenration);
+
+    var handleTeamIdGenration = function () {
+      httpRequest.onreadystatechange = showId;
+      httpRequest.open('POST', 'register.php');
+      httpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+      // TODO: set up the params for backend
+      httpRequest.send("username=" + form.username.value);
+    }
+
+    function showId() {
+      if (httpRequest.readyState = XMLHttpRequest.DONE) {
+        if (httpRequest.status === 200) {
+          // TODO: Pull the team id into teamId variable:
+          teamId = '';
+
+          success.style.display = 'block';
+          window.scrollTo(0, 0);
+        } else {
+          fail.style.display = 'block';
+          window.scrollTo(0, 0);
+        }
+      };
+    }
+  </script>
 
 </body>
 
