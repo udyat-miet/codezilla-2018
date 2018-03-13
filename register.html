@@ -164,18 +164,19 @@
     <p>
       Registration successful.
       <br> Your team id is:
-      <span id="team_id" style="color: black;">TEAM_ID</span>
+      <span id="team_id" style="color: black;"></span>
       <br> Please note it for future references.
     </p>
   </div>
 
   <div class="fail">
     <p>Oh Snap!!
-      <br> Something went wrong. Please try again.</p>
+      <br> <span id="err_msg" style="color: black;"></span>
+    </p>
   </div>
 
-  <form action="register.php" method="post">
-
+  <form action="register.php" method="post" onsubmit="return false;">
+ 
     <h1>Register</h1>
 
     <fieldset>
@@ -237,10 +238,10 @@
         <span class="number">3</span>Member 2 details</legend>
 
       <label for="member2">Name:</label>
-      <input type="text" id="member2" name="member2" required>
+      <input type="text" id="member2" name="member2">
 
       <label for="codechef2">Codechef username</label>
-      <input type="text" id="codechef2" name="codechef2" required>
+      <input type="text" id="codechef2" name="codechef2">
 
       <label for="college2">College</label>
       <input type="text" id="college2" name="college2">
@@ -277,33 +278,69 @@
     var success = document.getElementsByClassName('success')[0];
     var fail = document.getElementsByClassName('fail')[0];
     var teamId = document.getElementById('team_id');
+    var errMsg = document.getElementById('err_msg');
+    var form = document.getElementsByTagName('form')[0];
 
     httpRequest = new XMLHttpRequest();
 
-    btn.addEventListener('click', handleTeamIdGenration);
-
     var handleTeamIdGenration = function () {
-      httpRequest.onreadystatechange = showId;
+      // hide success/error messages before submitting form data
+      success.style.display = fail.style.display = 'none';
+
+      var formData = {
+        email: form.email.value,
+        team_name: form.team_name.value,
+        is_miet: form.is_miet.value,
+        member1: form.member1.value,
+        codechef1: form.codechef1.value,
+        college1: form.college1.value,
+        roll1: form.roll1.value,
+        branch1: form.branch1.value,
+        year1: form.year1.background,
+        member2: form.member2.value,
+        codechef2: form.codechef2.value,
+        college2: form.college2.value,
+        roll2: form.roll2.value,
+        branch2: form.branch2.value,
+        year2: form.year2.background
+      };
+
+      httpRequest.onreadystatechange = showResponse;
       httpRequest.open('POST', 'register.php');
       httpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-      // TODO: set up the params for backend
-      httpRequest.send("username=" + form.username.value);
+      httpRequest.send(encode_form_data(formData));
     }
 
-    function showId() {
-      if (httpRequest.readyState = XMLHttpRequest.DONE) {
-        if (httpRequest.status === 200) {
-          // TODO: Pull the team id into teamId variable:
-          teamId.textContent = '';
+    btn.addEventListener('click', handleTeamIdGenration);
 
-          success.style.display = 'block';
-          window.scrollTo(0, 0);
-        } else {
-          fail.style.display = 'block';
-          window.scrollTo(0, 0);
+    function showResponse() {
+      if (httpRequest.readyState === XMLHttpRequest.DONE) {
+        if (httpRequest.status === 200) {
+          var result = JSON.parse(httpRequest.response);
+          if (result.code === 202) {
+            teamId.textContent = result.data;
+            success.style.display = 'block';
+            window.scrollTo(0, 0);
+            return;
+          }
+
+          errMsg.textContent = result.data;
         }
+
+        if (!errMsg.textContent)
+          errMsg.textContent = 'Server did not send any response!';
+        fail.style.display = 'block';
+        window.scrollTo(0, 0);
       };
+    }
+
+    function encode_form_data(formData) {
+      var encoded = '';
+      for(var key in formData) {
+        encoded += '&' + key + '=' + formData[key];
+      }
+
+      return encodeURI(encoded.substring(1, encoded.length - 1));
     }
   </script>
 
