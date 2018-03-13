@@ -295,7 +295,7 @@
       if (httpRequest.readyState = XMLHttpRequest.DONE) {
         if (httpRequest.status === 200) {
           // TODO: Pull the team id into teamId variable:
-          teamId = '';
+          teamId.textContent = '';
 
           success.style.display = 'block';
           window.scrollTo(0, 0);
