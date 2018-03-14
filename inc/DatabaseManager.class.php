@@ -15,7 +15,8 @@ class DatabaseManager {
 			"INSERT INTO " . DB_TABLE . " VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);"
 		);
 		$statement->bind_param(
-			"isssssisisssisi", $team['id'], $team['name'], $team['email'],
+			"issssssisisssisi",
+			$team['id'], $team['name'], $team['email'], $team['phone'],
 			$team['member'][0]['name'], $team['member'][0]['codechef'],
 			$team['member'][0]['college'], $team['member'][0]['roll'],
 			$team['member'][0]['branch'], $team['member'][0]['year'],

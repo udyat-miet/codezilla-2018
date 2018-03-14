@@ -78,7 +78,8 @@ function load_email_template($team) {
 $team = array(
 	'name' => filter_input(INPUT_POST, "team_name", FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH),
 	'is_miet' => filter_input(INPUT_POST, "is_miet", FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH),
-	'email' => filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL)
+	'email' => filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL),
+	'phone' => filter_input(INPUT_POST, "phone", FILTER_SANITIZE_NUMBER_INT)
 );
 
 fetch_member($team, 1);
@@ -86,6 +87,10 @@ fetch_member($team, 2);
 
 if (filter_var($team['email'], FILTER_VALIDATE_EMAIL) === FALSE)
 		die(format_response(406, "Incorrect contact email!"));
+
+if (filter_var($team['phone'], FILTER_VALIDATE_INT) === FALSE
+	|| $team['phone'] < 1000000000) // less than 10-digits
+		die(format_response(406, "Incorrect phone number!"));
 
 if (empty($team['name']) === TRUE)
 		die(format_response(400, "Team name can not be left blank!"));
